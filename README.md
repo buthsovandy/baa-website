@@ -71,3 +71,15 @@ src/
 ## ពណ៌ (កែក្នុង `src/index.css`)
 
 `--color-ink` ខ្មៅ · `--color-cream` ក្រែម · `--color-gold` មាស · `--color-sand` ខ្សាច់
+
+## Live
+
+**https://buthsovandy.github.io/baa-website/** (GitHub Pages, ឥតគិតថ្លៃ)
+
+ក្រោយកែកូដ ដាក់ online ឡើងវិញដោយពាក្យបញ្ជាតែមួយ៖
+
+```bash
+npm run deploy:gh
+```
+
+(វា build ជាមួយ base path `/baa-website/`, បន្ថែម `404.html` សម្រាប់ SPA routing, រួច push ទៅ branch `gh-pages`។)

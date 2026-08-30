@@ -32,7 +32,8 @@ run(
     : `git worktree add --detach ${WORKTREE} && git -C ${WORKTREE} checkout --orphan gh-pages`,
 )
 
-run(`git -C ${WORKTREE} rm -rq --ignore-unmatch .`)
+// --orphan stages every source file, so force-clear the worktree before copying dist
+run(`git -C ${WORKTREE} rm -rfq --ignore-unmatch .`)
 run(`node -e "require('fs').cpSync('dist','${WORKTREE}',{recursive:true})"`)
 run(`git -C ${WORKTREE} add -A`)
 run(
