@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:gh": "node scripts/build-gh.mjs",
+    "deploy:gh": "node scripts/deploy-gh.mjs"
   },
   "dependencies": {
     "react": "^19.2.8",
